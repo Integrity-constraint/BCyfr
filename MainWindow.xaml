@@ -1,0 +1,38 @@
+﻿<Window x:Class="BCyfr.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BCyfr" xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="BCyfr" Height="450" MinHeight="450" MinWidth="800" Width="800" Icon="/OIG3.ico.ico">
+   
+    <Grid>
+        <Label Content="Значение 1:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <TextBox Name="Value1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,10,0,0" Width="150"/>
+
+        <Label Content="Значение 2:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,50,0,0"/>
+        <TextBox Name="Value2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="100,50,0,0" Width="150"/>
+
+        <Button Background="White" Content="Рассчитать" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,90,0,0" Width="100" Click="CalculateError"/>
+
+        <Label Content="Абсолютная погрешность 1:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,130,0,0"/>
+        <TextBox Name="AbsoluteError1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,130,0,0" Width="511" IsReadOnly="True"/>
+
+        <Label Content="Относительная погрешность 1:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,170,0,0"/>
+        <TextBox Name="RelativeError1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,170,0,0" Width="511" IsReadOnly="True"/>
+
+        <Label Content="Абсолютная погрешность 2:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,210,0,0"/>
+        <TextBox Name="AbsoluteError2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,210,0,0" Width="511" IsReadOnly="True"/>
+
+        <Label Content="Относительная погрешность 2:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,250,0,0"/>
+        <TextBox Name="RelativeError2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="200,254,0,0" Width="511" IsReadOnly="True"/>
+        <Label Margin="272,10,47,354" FontSize="36" FontFamily="Jura Medium"  >Сравнение точности чисел</Label>
+        <ScrollViewer Margin="10,299,10,0">
+            <oxy:PlotView Name="PlotView" >
+
+            </oxy:PlotView>
+        </ScrollViewer>
+       
+    </Grid>
+</Window>
